@@ -41,6 +41,7 @@
             <img src="Resume.png" alt="">
         </div>
         <a href="personalHomepage2.html">See my CS 313 Work!</a>
+        <?php include 'index.php'?>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
