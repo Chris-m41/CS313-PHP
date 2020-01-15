@@ -1,4 +1,3 @@
-<?php
 <!-- Footer -->
 <footer class="page-footer font-small blue pt-4">
 
@@ -81,4 +80,3 @@
   <!-- Copyright -->
 
 </footer>
-?>
