@@ -40,7 +40,7 @@
         <div class="col-lg-12">
             <img src="Resume.png" alt="">
         </div>
-        <a href="personalHomepage2.html">See my CS 313 Work!</a>
+        <a href="personalHomepage2.php">See my CS 313 Work!</a>
     </div>
     <?php include 'index.php';?>
     <!-- Optional JavaScript -->
