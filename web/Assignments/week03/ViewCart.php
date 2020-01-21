@@ -81,8 +81,8 @@ $_SESSION["total"] = $total;
 		<td colspan="7">Total : <?php echo($total); ?></td>
 	</tr>
 </table>
-<a href="display.php"><button >Checkout</button></a>
-<a href="index1.php"><button >Add Items</button></a>
+<a href="Checkout.php"><button >Checkout</button></a>
+<a href="BrowseItems.php"><button >Add Items</button></a>
 
 <?php
 }
