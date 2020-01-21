@@ -67,7 +67,7 @@ for ($i=0; $i< count($products); $i++) {
 <?php
 }
 ?>
-    <a colspan="5" href="cart1.php"><button >View Cart</button></a>
+    <a colspan="5" href="ViewCart.php"><button >View Cart</button></a>
     <a href="?reset=true"><button >Reset Cart</button></a>
 
 
