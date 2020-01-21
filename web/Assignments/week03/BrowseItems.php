@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+  <h1>Please choose which items you want to add to your cart!</h1>
         <div class="container">
             <fieldset>
             <label for="Brocoli">Brocoli</label>
@@ -21,6 +22,22 @@
             <label for="Potatoes">Potatoes</label>
             <input type="checkbox" name="Potatoes" id="Potatoes" value="Potatoes">
         </fieldset>
+        <?php
+    $cookie_name = "Bocoli";
+    $cookie_value = "Brocoli";
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+    ?>
+    <html>
+    <body>
+
+    <?php
+    if(!isset($_COOKIE[$cookie_name])) {
+        echo "Cookie named '" . $cookie_name . "' is not set!";
+    } else {
+        echo "Cookie '" . $cookie_name . "' is set!<br>";
+        echo "Value is: " . $_COOKIE[$cookie_name];
+    }
+    ?>
         </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
