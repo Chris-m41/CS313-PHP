@@ -4,8 +4,6 @@
 <style>
 .error {color: #FF0000;}
 </style>
-<?php include ("week03Header.php");?>
-<link rel="stylesheet" type="text/css" href="week03.css">
 </head>
 <body>  
 
