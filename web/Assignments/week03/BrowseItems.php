@@ -14,7 +14,7 @@
         <div class="container">
             <fieldset>
             <label for="Brocoli">Brocoli</label>
-            <input type="checkbox" name="Brocoli" id="Brocoli" value="Brocoli">
+            <input type="checkbox" name="Brocoli" id="Brocoli" value="Brocoli" <?php setcookie("Brocoli", "Brocoli", time() + (86400 * 30), "/");?>>
             <label for="Bananas">Bananas</label>
             <input type="checkbox" name="Bananas" id="Bananas" value="Bananas">
             <label for="Apples">Apples</label>
@@ -22,14 +22,12 @@
             <label for="Potatoes">Potatoes</label>
             <input type="checkbox" name="Potatoes" id="Potatoes" value="Potatoes">
         </fieldset>
-        <?php
+        <!-- <?php
     $cookie_name = "Bocoli";
     $cookie_value = "Brocoli";
     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-    ?>
-    <html>
-    <body>
-
+    ?> -->
+   
     <?php
     if(!isset($_COOKIE[$cookie_name])) {
         echo "Cookie named '" . $cookie_name . "' is not set!";
