@@ -21,20 +21,29 @@
             <input type="checkbox" name="Apples" id="Apples" value="Apples">
             <label for="Potatoes">Potatoes</label>
             <input type="checkbox" name="Potatoes" id="Potatoes" value="Potatoes">
-        </fieldset>
-        <!-- <?php
-    $cookie_name = "Bocoli";
-    $cookie_value = "Brocoli";
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-    ?> -->
-   
-    <?php
+            
+            <?php
     if(!isset($_COOKIE[$cookie_name])) {
         echo "Cookie named '" . $cookie_name . "' is not set!";
     } else {
         echo "Cookie '" . $cookie_name . "' is set!<br>";
         echo "Value is: " . $_COOKIE[$cookie_name];
     }
+    ?>
+        </fieldset>
+        <!-- <?php
+    // $cookie_name = "Bocoli";
+    // $cookie_value = "Brocoli";
+    // setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+    ?> -->
+   
+    <?php
+    // if(!isset($_COOKIE[$cookie_name])) {
+    //     echo "Cookie named '" . $cookie_name . "' is not set!";
+    // } else {
+    //     echo "Cookie '" . $cookie_name . "' is set!<br>";
+    //     echo "Value is: " . $_COOKIE[$cookie_name];
+    // }
     ?>
         </div>
     <!-- Optional JavaScript -->
