@@ -1,20 +1,89 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>View Cart Page</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php
+session_start();
+?>
+<?php
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-  
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
-</html>
+$products = array("Pizza", "Burger", "Hot Dog", "Pretzel");
+$amounts = array("1.99", "2.99", "3.99", ".99");
+
+if ( !isset($_SESSION["total"]) ) {
+	$_SESSION["total"] = 0;
+	for ($i=0; $i< count($products); $i++) {
+		$_SESSION["qty"][$i] = 0;
+		$_SESSION["amounts"][$i] = 0;
+	}
+}
+// reset
+if ( isset($_GET['reset']) ) {
+	if ($_GET["reset"] == 'true') {
+		unset($_SESSION["qty"]); 
+		unset($_SESSION["amounts"]); 
+		unset($_SESSION["total"]); 
+		unset($_SESSION["cart"]); 
+	}
+}
+// add
+if ( isset($_GET["add"]) ) {
+	$i = $_GET["add"];
+	$qty = $_SESSION["qty"][$i] + 1;
+	$_SESSION["amounts"][$i] = $amounts[$i] * $qty;
+	$_SESSION["cart"][$i] = $i;
+	$_SESSION["qty"][$i] = $qty;
+ }
+// delete
+if ( isset($_GET["delete"]) ) {
+	$i = $_GET["delete"];
+	$qty = $_SESSION["qty"][$i];
+	$qty--;
+	$_SESSION["qty"][$i] = $qty;
+	
+	if ($qty == 0) {
+		$_SESSION["amounts"][$i] = 0;
+		unset($_SESSION["cart"][$i]);
+	} else {
+	$_SESSION["amounts"][$i] = $amounts[$i] * $qty;
+	}
+}
+?>
+
+<?php
+if ( isset($_SESSION["cart"]) ) {
+?>
+<h2>Cart</h2>
+<table>
+	<tr>
+		<th>Product</th>
+		<th width="10px">&nbsp;</th>
+		<th>Qty</th>
+		<th width="10px">&nbsp;</th>
+		<th>Amount</th>
+		<th width="10px">&nbsp;</th>
+		<th>Action</th>
+	</tr>
+<?php
+foreach ( $_SESSION["cart"] as $i ) {
+?>
+	<tr>
+		<td><?php echo( $products[$_SESSION["cart"][$i]] ); ?></td>
+		<td width="10px">&nbsp;</td>
+		<td><?php echo( $_SESSION["qty"][$i] ); ?></td>
+		<td width="10px">&nbsp;</td>
+		<td><?php echo( $_SESSION["amounts"][$i] ); ?></td>
+		<td width="10px">&nbsp;</td>
+		<td><a href="?delete=<?php echo($i); ?>">Delete from cart</a></td>
+	</tr>
+<?php
+$total = $total + $_SESSION["amounts"][$i];
+}
+$_SESSION["total"] = $total;
+?>
+	<tr>
+		<td colspan="7">Total : <?php echo($total); ?></td>
+	</tr>
+</table>
+<a href="display.php"><button >Checkout</button></a>
+<a href="index1.php"><button >Add Items</button></a>
+
+<?php
+}
+?>
