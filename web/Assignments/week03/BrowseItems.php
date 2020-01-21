@@ -1,57 +1,74 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Browse Items Page</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php
+// start session
+session_start();
+//define arrays
+$products = array("Pizza", "Burger", "Hot Dog", "Pretzel");
+$amounts = array("1.99", "2.99", "3.99", ".99");
+// add item values
+if ( !isset($_SESSION["total"]) ) {
+	$_SESSION["total"] = 0;
+	for ($i=0; $i< count($products); $i++) {
+		$_SESSION["qty"][$i] = 0;
+		$_SESSION["amounts"][$i] = 0;
+	}
+}
+// reset
+if ( isset($_GET['reset']) ) {
+	if ($_GET["reset"] == 'true') {
+		unset($_SESSION["qty"]); 
+		unset($_SESSION["amounts"]); 
+		unset($_SESSION["total"]); 
+		unset($_SESSION["cart"]); 
+	}
+}
+// add
+if ( isset($_GET["add"]) ) {
+	$i = $_GET["add"];
+	$qty = $_SESSION["qty"][$i] + 1;
+	$_SESSION["amounts"][$i] = $amounts[$i] * $qty;
+	$_SESSION["cart"][$i] = $i;
+	$_SESSION["qty"][$i] = $qty;
+ }
+// delete
+if ( isset($_GET["delete"]) ) {
+	$i = $_GET["delete"];
+	$qty = $_SESSION["qty"][$i];
+	$qty--;
+	$_SESSION["qty"][$i] = $qty;
+	
+	if ($qty == 0) {
+		$_SESSION["amounts"][$i] = 0;
+		unset($_SESSION["cart"][$i]);
+	} else {
+	$_SESSION["amounts"][$i] = $amounts[$i] * $qty;
+	}
+}
+?>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-  <h1>Please choose which items you want to add to your cart!</h1>
-        <div class="container">
-        <form method="post" action="BrowseItems.php">
-            <fieldset>
-            <label for="Brocoli">Brocoli</label>
-            <input type="checkbox" name="Brocoli" id="Brocoli" value="Brocoli" <?php setcookie("Brocoli", "Brocoli", time() + (86400 * 30), "/");?>>
-            <label for="Bananas">Bananas</label>
-            <input type="checkbox" name="Bananas" id="Bananas" value="Bananas">
-            <label for="Apples">Apples</label>
-            <input type="checkbox" name="Apples" id="Apples" value="Apples">
-            <label for="Potatoes">Potatoes</label>
-            <input type="checkbox" name="Potatoes" id="Potatoes" value="Potatoes">
-            
-            <?php
-    if(!isset($_COOKIE[$cookie_name])) {
-        echo "Cookie named '" . $cookie_name . "' is not set!";
-    } else {
-        echo "Cookie '" . $cookie_name . "' is set!<br>";
-        echo "Value is: " . $_COOKIE[$cookie_name];
-    }
-    ?>
-        </fieldset>
-    </form>
-        <!-- <?php
-    // $cookie_name = "Bocoli";
-    // $cookie_value = "Brocoli";
-    // setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-    ?> -->
-   
-    <?php
-    // if(!isset($_COOKIE[$cookie_name])) {
-    //     echo "Cookie named '" . $cookie_name . "' is not set!";
-    // } else {
-    //     echo "Cookie '" . $cookie_name . "' is set!<br>";
-    //     echo "Value is: " . $_COOKIE[$cookie_name];
-    // }
-    ?>
-        </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
-</html>
+<h2>List of All Products</h2>
+<table>
+	<tr>
+		<th>Product</th>
+		<th width="10px">&nbsp;</th>
+		<th>Amount</th>
+		<th width="10px">&nbsp;</th>
+		<th>Action</th>
+	</tr>
+<?php
+for ($i=0; $i< count($products); $i++) {
+?>
+	<tr>
+		<td><?php echo($products[$i]); ?></td>
+		<td width="10px">&nbsp;</td>
+		<td><?php echo($amounts[$i]); ?></td>
+		<td width="10px">&nbsp;</td>
+		<td><a href="?add=<?php echo($i); ?>">Add to cart</a></td>
+	</tr>
+<?php
+}
+?>
+    <a colspan="5" href="cart1.php"><button >View Cart</button></a>
+    <a href="?reset=true"><button >Reset Cart</button></a>
+
+
+</table>
