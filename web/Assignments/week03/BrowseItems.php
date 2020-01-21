@@ -12,6 +12,7 @@
   <body>
   <h1>Please choose which items you want to add to your cart!</h1>
         <div class="container">
+        <form>
             <fieldset>
             <label for="Brocoli">Brocoli</label>
             <input type="checkbox" name="Brocoli" id="Brocoli" value="Brocoli" <?php setcookie("Brocoli", "Brocoli", time() + (86400 * 30), "/");?>>
@@ -31,6 +32,7 @@
     }
     ?>
         </fieldset>
+    </form>
         <!-- <?php
     // $cookie_name = "Bocoli";
     // $cookie_value = "Brocoli";
