@@ -14,6 +14,9 @@
 <body>
     <h1>Check out my personal work!</h1>
     <h4>Coming soon!</h4>
+    <table>
+    <td><a href="week03/BrowseItems.php"> Week 03 Shopping Cart</a></td>
+    </table>
 
     <?php include 'index.php';?>
     <!-- Optional JavaScript -->
