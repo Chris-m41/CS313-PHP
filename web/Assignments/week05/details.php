@@ -23,7 +23,7 @@
         $id = $course['id'];
         $name = $course['display_name'];
         $price = $course['price'];
-        echo"<li><p>$name - $price </p></li>";
+        echo"<p>$name - $price </p>";
     }
     ?>
 </body>
