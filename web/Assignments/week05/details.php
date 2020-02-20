@@ -6,7 +6,7 @@
         $db = get_db();
 
         $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
-        $stmt = $db->prepare($query);
+        $stmt = $db->prepare($cookieQuery);
         $stmt->execute();
         $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
