@@ -3,6 +3,7 @@
 <head>
     <?php
         require('connect.php');
+        require('retrieve.php');
         $db = get_db();
 
         $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
@@ -35,13 +36,8 @@
     <?php
         if (isset($_POST['Cookies'])){
             echo $_POST['Cookies']; // Displays value of checked checkbox.
-            foreach($cookies as $cookie)
-    {
-        $id = $cookie['id'];
-        $name = $cookie['display_name'];
-        $price = $cookie['price'];
-        echo"<p>$name - $price </p>";
-    }
+            echo getCookies();
+
         }
     ?>
 
