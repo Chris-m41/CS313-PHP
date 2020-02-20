@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <?php
-        // require('connect.php');
-        // require('retrieve.php');
-        // $db = get_db();
+    <?php
+        require('connect.php');
+        require('retrieve.php');
+        $db = get_db();
 
-        // $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
-        // $stmt = $db->prepare($cookieQuery);
-        // $stmt->execute();
-        // $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    ?> -->
+        // Cookie Query
+        $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
+        $stmt = $db->prepare($cookieQuery);
+        $stmt->execute();
+        $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Soda Query
+        $sodaQuery = 'SELECT id, display_name, price FROM Cookies';
+        $stmt = $db->prepare($sodaQuery);
+        $stmt->execute();
+        $sodas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    ?>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +25,7 @@
     <title>Details</title>
 </head>
 <body>
-    <?php
-    foreach($cookies as $cookie)
-    {
-        $id = $cookie['id'];
-        $name = $cookie['display_name'];
-        $price = $cookie['price'];
-        echo"<p>$name - $price </p>";
-    }
-    ?>
+  
     <h1>Click on the checkbox to see brands pertaining to that item.</h1>
     <form action="#" method="post">
         <input type="checkbox" name="Cookies" value="Cookies">Cookies</input>
@@ -37,8 +36,23 @@
         require('retrieve.php');
         if (isset($_POST['Cookies'])){
             echo $_POST['Cookies']; // Displays value of checked checkbox.
-            echo getCookies();
-
+            foreach($cookies as $cookie)
+            {
+                $id = $cookie['id'];
+                $name = $cookie['display_name'];
+                $price = $cookie['price'];
+                echo"<p>$name - $price </p>";
+            }
+        }
+        elseif (isset($_POST['Soda'])){
+            echo $_POST['Soda'];
+            foreach($soda as $soda)
+            {
+                $id = $soda['id'];
+                $name = $soda['display_name'];
+                $price = $soda['price'];
+                echo"<p>$name - $price </p>";
+            }
         }
     ?>
 

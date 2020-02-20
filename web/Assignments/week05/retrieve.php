@@ -13,7 +13,7 @@
             $stmt->execute();
             $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            return foreach($cookies as $cookie)
+            foreach($cookies as $cookie)
             {
                 $id = $cookie['id'];
                 $name = $cookie['display_name'];
