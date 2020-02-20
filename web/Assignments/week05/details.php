@@ -31,7 +31,7 @@
         $chocolates = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Gum Query
-        $gumeQuery = 'SELECT id, display_name, price FROM Gum';
+        $gumQuery = 'SELECT id, display_name, price FROM Gum';
         $stmt = $db->prepare($gumQuery);
         $stmt->execute();
         $gums = $stmt->fetchAll(PDO::FETCH_ASSOC);
