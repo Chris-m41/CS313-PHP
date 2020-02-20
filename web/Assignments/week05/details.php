@@ -26,5 +26,16 @@
         echo"<p>$name - $price </p>";
     }
     ?>
+    <h1>Click on the checkbox to see brands pertaining to that item.</h1>
+    <form action="#" method="post">
+        <input type="checkbox" name="Cookies" value="Cookies">Cookies</input>
+        <input type="checkbox" name="Soda" value="Soda">Soda</input>
+        <input type="submit" name="submit" value="Submit"/>
+    </form>
+    <?php
+        if (isset($_POST['Cookies'])){
+            echo $_POST['gender']; // Displays value of checked checkbox.
+    ?>
+
 </body>
 </html>
