@@ -3,16 +3,17 @@
 <head>
     <?php
         require('connect.php');
+
         $db = get_db();
 
         // Cookie Query
         $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
-        $Cstmt = $db->prepare($cookieQuery);
-        $Cstmt->execute();
-        $cookies = $Cstmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $db->prepare($cookieQuery);
+        $stmt->execute();
+        $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Soda Query
-        $sodaQuery = 'SELECT id, display_name, price FROM Cookies';
+        $sodaQuery = 'SELECT id, display_name, price FROM Soda';
         $stmt = $db->prepare($sodaQuery);
         $stmt->execute();
         $sodas = $stmt->fetchAll(PDO::FETCH_ASSOC);
