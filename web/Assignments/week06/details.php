@@ -110,6 +110,9 @@
             }
         }
     ?>
+    <h2><a href="addItem.php">Add an Item</a></h2>
+    <h2>Want to add an item to the list?</h2>
+    <h2>Click on the item and then type in the required information.</h2>
 
 </body>
 </html>
