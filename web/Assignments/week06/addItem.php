@@ -7,6 +7,7 @@
     <title>AddItem</title>
 </head>
 <body>
-    Add Item
+    <h2>Want to add an item to the list?</h2>
+    <h2>Click on the item and then type in the required information.</h2>
 </body>
 </html>
