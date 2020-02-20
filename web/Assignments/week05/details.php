@@ -8,7 +8,7 @@
         $query = 'SELECT id, display_name, price FROM Cookies';
         $stmt = $db->prepare($query);
         $stmt->execute();
-        $courses = $stmt->fetchAll(PDO:FETCH_ASSOC);
+        $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
     <meta charset="UTF-8">
