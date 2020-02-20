@@ -24,7 +24,7 @@
 </head>
 <body>
     <?php
-        echo '<p><b>' . $result['id'] . ' ' . $result['display_name'] . ':' . $result['price'] . '</b> - "';
+        echo '<p><b>' . $result['display_name'] . ':' . $result['price'] . '</b> - "';
     ?>
 </body>
 </html>
