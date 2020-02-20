@@ -46,7 +46,7 @@
         }
         elseif (isset($_POST['Soda'])){
             echo $_POST['Soda'];
-            foreach($soda as $soda)
+            foreach($sodas as $soda)
             {
                 $id = $soda['id'];
                 $name = $soda['display_name'];
