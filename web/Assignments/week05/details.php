@@ -19,10 +19,22 @@
         $sodas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Soaps Query
-        $soapQuery = 'SELECT id, display_name, price FROM Soda';
+        $soapQuery = 'SELECT id, display_name, price FROM Soaps';
         $stmt = $db->prepare($soapQuery);
         $stmt->execute();
         $soaps = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Chocolate Query
+        $chocolateQuery = 'SELECT id, display_name, price FROM Chocolate';
+        $stmt = $db->prepare($chocolateQuery);
+        $stmt->execute();
+        $chocolates = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Gum Query
+        $gumeQuery = 'SELECT id, display_name, price FROM Gum';
+        $stmt = $db->prepare($gumQuery);
+        $stmt->execute();
+        $gums = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
     <meta charset="UTF-8">
@@ -38,6 +50,8 @@
         <input type="checkbox" name="Cookies" value="Cookies">Cookies</input>
         <input type="checkbox" name="Soda" value="Soda">Soda</input>
         <input type="checkbox" name="Soap" value="Soap">Soap</input>
+        <input type="checkbox" name="Chocolate" value="Chocolate">Chocolate</input>
+        <input type="checkbox" name="Gum" value="Gum">Gum</input>
         <input type="submit" name="submit" value="Submit"/>
     </form>
     <?php
@@ -71,6 +85,28 @@
                 $id = $soap['id'];
                 $name = $soap['display_name'];
                 $price = $soap['price'];
+                echo"<p>$name - $price </p>";
+            }
+        }
+        elseif (isset($_POST['Chocolate']))
+        {
+            echo $_POST['Chocolate'];
+            foreach($chocolates as $chocolate)
+            {
+                $id = $chocolate['id'];
+                $name = $chocolate['display_name'];
+                $price = $chocolate['price'];
+                echo"<p>$name - $price </p>";
+            }
+        }
+        elseif (isset($_POST['Gum']))
+        {
+            echo $_POST['Gum'];
+            foreach($gums as $gum)
+            {
+                $id = $gum['id'];
+                $name = $gum['display_name'];
+                $price = $gum['price'];
                 echo"<p>$name - $price </p>";
             }
         }
