@@ -7,9 +7,9 @@
 
         // Cookie Query
         $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
-        $stmt = $db->prepare($cookieQuery);
-        $stmt->execute();
-        $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $Cstmt = $db->prepare($cookieQuery);
+        $Cstmt->execute();
+        $cookies = $Cstmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Soda Query
         $sodaQuery = 'SELECT id, display_name, price FROM Cookies';
