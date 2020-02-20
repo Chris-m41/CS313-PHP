@@ -21,7 +21,7 @@
     foreach($courses as $course)
     {
         $id = $course['id'];
-        $name = $course['name'];
+        $name = $course['display_name'];
         $price = $course['price'];
         echo"<li><p>$name - $price </p></li>";
     }
