@@ -34,7 +34,7 @@
     </form>
     <?php
         if (isset($_POST['Cookies'])){
-            echo $_POST['gender']; // Displays value of checked checkbox.
+            echo $_POST['Cookies']; // Displays value of checked checkbox.
         }
     ?>
 
