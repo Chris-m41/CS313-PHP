@@ -6,7 +6,7 @@
         $db = get_db();
 
         $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
-        $stmt = $db->prepare($cookieQuery);
+        $stmt = $db->prepare($query);
         $stmt->execute();
         $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
@@ -18,11 +18,11 @@
 </head>
 <body>
     <?php
-    foreach($courses as $course)
+    foreach($cookies as $cookie)
     {
-        $id = $cookies['id'];
-        $name = $cookies['display_name'];
-        $price = $cookies['price'];
+        $id = $cookie['id'];
+        $name = $cookie['display_name'];
+        $price = $cookie['price'];
         echo"<p>$name - $price </p>";
     }
     ?>
