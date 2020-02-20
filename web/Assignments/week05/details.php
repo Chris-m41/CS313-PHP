@@ -3,7 +3,6 @@
 <head>
     <?php
         require('connect.php');
-        require('retrieve.php');
         $db = get_db();
 
         // Cookie Query
