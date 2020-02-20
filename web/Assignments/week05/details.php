@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php
-        require('connect.php');
-        require('retrieve.php');
-        $db = get_db();
+    <!-- <?php
+        // require('connect.php');
+        // require('retrieve.php');
+        // $db = get_db();
 
-        $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
-        $stmt = $db->prepare($cookieQuery);
-        $stmt->execute();
-        $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    ?>
+        // $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
+        // $stmt = $db->prepare($cookieQuery);
+        // $stmt->execute();
+        // $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    ?> -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,7 @@
         <input type="submit" name="submit" value="Submit"/>
     </form>
     <?php
+        require('retrieve.php');
         if (isset($_POST['Cookies'])){
             echo $_POST['Cookies']; // Displays value of checked checkbox.
             echo getCookies();
