@@ -25,7 +25,6 @@
         $price = $course['price'];
         echo"<li><p>$name - $price </p></li>";
     }
-        echo '<p><b>' . $result['display_name'] . ':' . $result['price'] . '</b> - "';
     ?>
 </body>
 </html>
