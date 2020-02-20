@@ -5,10 +5,10 @@
         require('connect.php');
         $db = get_db();
 
-        $query = 'SELECT id, display_name, price FROM Cookies';
-        $stmt = $db->prepare($query);
+        $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
+        $stmt = $db->prepare($cookieQuery);
         $stmt->execute();
-        $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
     <meta charset="UTF-8">
@@ -20,9 +20,9 @@
     <?php
     foreach($courses as $course)
     {
-        $id = $course['id'];
-        $name = $course['display_name'];
-        $price = $course['price'];
+        $id = $cookies['id'];
+        $name = $cookies['display_name'];
+        $price = $cookies['price'];
         echo"<p>$name - $price </p>";
     }
     ?>
