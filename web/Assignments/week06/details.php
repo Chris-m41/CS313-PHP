@@ -55,7 +55,6 @@
         <input type="submit" name="submit" value="Submit"/>
     </form>
     <?php
-        require('retrieve.php');
         if (isset($_POST['Cookies'])){
             echo $_POST['Cookies']; // Displays value of checked checkbox.
             foreach($cookies as $cookie)
