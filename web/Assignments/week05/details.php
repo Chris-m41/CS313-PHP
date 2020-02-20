@@ -17,6 +17,12 @@
         $stmt = $db->prepare($sodaQuery);
         $stmt->execute();
         $sodas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Soaps Query
+        $soapQuery = 'SELECT id, display_name, price FROM Soda';
+        $stmt = $db->prepare($soapQuery);
+        $stmt->execute();
+        $soaps = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
     <meta charset="UTF-8">
@@ -26,10 +32,12 @@
 </head>
 <body>
   
-    <h1>Click on the checkbox to see brands pertaining to that item.</h1>
+    <h1>See brands pertaining to that item.</h1>
+    <h3>Click on one checkbox at a time</h3>
     <form action="#" method="post">
         <input type="checkbox" name="Cookies" value="Cookies">Cookies</input>
         <input type="checkbox" name="Soda" value="Soda">Soda</input>
+        <input type="checkbox" name="Soap" value="Soap">Soap</input>
         <input type="submit" name="submit" value="Submit"/>
     </form>
     <?php
@@ -44,13 +52,25 @@
                 echo"<p>$name - $price </p>";
             }
         }
-        elseif (isset($_POST['Soda'])){
+        elseif (isset($_POST['Soda']))
+        {
             echo $_POST['Soda'];
             foreach($sodas as $soda)
             {
                 $id = $soda['id'];
                 $name = $soda['display_name'];
                 $price = $soda['price'];
+                echo"<p>$name - $price </p>";
+            }
+        }
+        elseif (isset($_POST['Soap']))
+        {
+            echo $_POST['Soap'];
+            foreach($soaps as $soap)
+            {
+                $id = $soap['id'];
+                $name = $soap['display_name'];
+                $price = $soap['price'];
                 echo"<p>$name - $price </p>";
             }
         }
