@@ -7,14 +7,6 @@
     <title>Add Cookies</title>
 </head>
 <body>
-    <form action="addCookies.php" method="post">
-    <textarea name="display_name"></textarea>
-    <textarea name="price"></textarea>
-    <input type="submit" value="Add Cookie Info" />
-    </form>
-
-
-    <h3><a href="../details.php">Return to Main Menu</a></h3>
     <?php
         // get the data from the POST
     $display_name = $_POST['display_name'];
@@ -52,7 +44,7 @@
     }
 
     // finally, redirect them to a new page to actually show the topics
-    // header("Location: ../details.php");
+    header("Location: ../details.php");
 
     die(); // we always include a die after redirects. In this case, there would be no
         // harm if the user got the rest of the page, because there is nothing else
