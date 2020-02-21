@@ -7,14 +7,6 @@
     <title>Add Soda</title>
 </head>
 <body>
-    <form action="../forms/addSoda.php" method="post">
-    <textarea name="display_name"></textarea>
-    <textarea name="price"></textarea>
-    <input type="submit" value="Add Soda Info" />
-    </form>
-
-
-    <h3><a href="../details.php">Return to Main Menu</a></h3
     <?php
         // get the data from the POST
     $display_name = $_POST['display_name'];
