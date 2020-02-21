@@ -29,7 +29,7 @@
 // we could (and should!) put additional checks here to verify that all this data is actually provided
 
 
-require("dbConnect.php");
+require("../connect.php");
 $db = get_db();
 
 try
