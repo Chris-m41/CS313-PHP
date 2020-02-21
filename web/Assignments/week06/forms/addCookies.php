@@ -26,7 +26,7 @@
 
     try
     {
-        // Add the Scripture
+      
 
         // We do this by preparing the query with placeholder values
         $query = 'INSERT INTO cookies(display_name, price) VALUES(:display_name, :price )';
@@ -47,6 +47,7 @@
         // Please be aware that you don't want to output the Exception message in
         // a production environment
         console.log("Error with DB. Details: $ex");
+        echo "Error with DB. Details: $ex";
         die();
     }
 
