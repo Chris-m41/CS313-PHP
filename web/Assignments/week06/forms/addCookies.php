@@ -31,8 +31,7 @@
 
         $statement->execute();
 
-        // // get the new id
-        // $cookieId= $db->lastInsertId("cookies_id_seq");
+       
     }
     catch (Exception $ex)
     {

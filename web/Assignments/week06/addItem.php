@@ -13,7 +13,7 @@
         <input type="submit" value="Add Cookie Brand" />
         </form>
 
-        <form action="forms/addSoda.php">
+        <form action="phpRedirects/soda.php">
         <input type="submit" value="Add Soda Brand" />
         </form>
 
