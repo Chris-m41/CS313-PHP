@@ -21,11 +21,11 @@
         <input type="submit" value="Add Soap Brand" />
         </form>
 
-        <form action="forms/addChocolate.php">
+        <form action="phpRedirects/chocolate.php">
         <input type="submit" value="Add Chocolate Brand" />
         </form>
 
-        <form action="forms/addGum.php">
+        <form action="phpRedirects/gum.php">
         <input type="submit" value="Add Gum Brand" />
         </form>
     
