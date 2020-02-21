@@ -9,14 +9,25 @@
 <body>
     <h2>Want to add an item to the list?</h2>
     <h2>Click on the item and then type in the required information.</h2>
-        <input type="button" onclick="addItem.php" value="Cookies">Cookies</input>
-        <input type="button" name="Soda" value="Soda">Soda</input>
-        <input type="button" name="Soap" value="Soap">Soap</input>
-        <input type="button" name="Chocolate" value="Chocolate">Chocolate</input>
-        <input type="button" name="Gum" value="Gum">Gum</input>
-        <form action="http://google.com">
-    <input type="submit" value="Go to Google" />
-</form>
+        <form action="addCookies.php">
+        <input type="submit" value="Add Cookie Brand" />
+        </form>
+
+        <form action="addSoda.php">
+        <input type="submit" value="Add Soda Brand" />
+        </form>
+
+        <form action="addSoap.php">
+        <input type="submit" value="Add Soap Brand" />
+        </form>
+
+        <form action="addChocolate.php">
+        <input type="submit" value="Add Chocolate Brand" />
+        </form>
+
+        <form action="addGum.php">
+        <input type="submit" value="Add Gum Brand" />
+        </form>
     
 </body>
 </html>
