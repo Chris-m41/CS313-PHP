@@ -7,7 +7,7 @@
     <title>Add gum</title>
 </head>
 <body>
-<form action="../forms/addChocolate.php" method="post">
+<form action="../forms/addGum.php" method="post">
     <textarea name="display_name"></textarea>
     <textarea name="price"></textarea>
     <textarea name="pieces"></textarea>
