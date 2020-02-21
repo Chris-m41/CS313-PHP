@@ -28,7 +28,7 @@
         // including sanitizing the input with regard to sql commands.
         $statement->bindValue(':display_name', $display_name);
         $statement->bindValue(':price', $price);
-        $statement->bindValue(':ounces', $ounces)
+        $statement->bindValue(':ounces', $ounces);
 
         $statement->execute();
 
