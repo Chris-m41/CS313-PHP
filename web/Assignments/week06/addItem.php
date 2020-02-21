@@ -9,7 +9,7 @@
 <body>
     <h2>Want to add an item to the list?</h2>
     <h2>Click on the item and then type in the required information.</h2>
-        <form action="forms/addCookies.php">
+        <form action="forms/cookies.php">
         <input type="submit" value="Add Cookie Brand" />
         </form>
 
