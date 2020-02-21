@@ -17,16 +17,29 @@
 
         $db = get_db();
 
-        // Cookie Query
-        $cookieQuery = 'SELECT id, display_name, price FROM Cookies';
-        $stmt = $db->prepare($cookieQuery);
-        $stmt->execute();
-        $cookies = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        $query = 'INSERT INTO Cookies (display_name, price)'
-        . ' VALUES (display_name, price);';
-        $db->query($query);
-        var_dump($db->errorInfo());
+        if(isset($_POST["submit"])){
+           
+            try {
+            $dbh = $db
+            
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // <== add this line
+            $sql = "INSERT INTO students (student_name, student_email, student_city)
+            VALUES ('".$_POST["display_name"]."','".$_POST["price"]'");
+            if ($dbh->query($sql)) {
+            echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
+            }
+            else{
+            echo "<script type= 'text/javascript'>alert('Data not successfully Inserted.');</script>";
+            }
+            
+            $dbh = null;
+            }
+            catch(PDOException $e)
+            {
+            echo $e->getMessage();
+            }
+            
+            }
     ?>
 </body>
 </html>
