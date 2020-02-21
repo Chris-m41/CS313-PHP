@@ -22,17 +22,17 @@
             try {
             $dbh = $db
             
-            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // <== add this line
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // <== add this line
             $sql = "INSERT INTO students (student_name, student_email, student_city)
             VALUES ('".$_POST["display_name"]."','".$_POST["price"]'");
-            if ($dbh->query($sql)) {
+            if ($db->query($sql)) {
             echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
             }
             else{
             echo "<script type= 'text/javascript'>alert('Data not successfully Inserted.');</script>";
             }
             
-            $dbh = null;
+            $db = null;
             }
             catch(PDOException $e)
             {
