@@ -7,7 +7,7 @@
     <title>Add Cookies</title>
 </head>
 <body>
-    <form action="addCookies.php" method="post">
+    <form action="details.php" method="post">
     <textarea name="display_name"></textarea>
     <textarea name="price"></textarea>
     <input type="submit" value="Add Cookie Info" />
