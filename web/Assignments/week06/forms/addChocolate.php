@@ -11,7 +11,7 @@
         // get the data from the POST
     $display_name = $_POST['display_name'];
     $price = $_POST['price'];
-  
+    $ounces = $_POST['ounces'];
 
     require("../connect.php");
     $db = get_db();
