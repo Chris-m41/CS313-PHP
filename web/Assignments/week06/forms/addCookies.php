@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="#" method="post">
+    <form action="addCookies.php" method="post">
     <textarea name="display_name"></textarea>
     <textarea name="price"></textarea>
     <input type="submit" value="Add Cookie Info" />
@@ -48,7 +48,7 @@ try
 	$statement->execute();
 
 	// // get the new id
-	// $cookieId= $db->lastInsertId("id");
+	$cookieId= $db->lastInsertId("id");
 }
 catch (Exception $ex)
 {
