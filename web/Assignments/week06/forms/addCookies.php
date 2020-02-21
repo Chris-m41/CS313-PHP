@@ -14,7 +14,7 @@
     </form>
 
 
-    <h3><a href="../details.php">Return to Main Menu</a></h3
+    <h3><a href="../details.php">Return to Main Menu</a></h3>
     <?php
         // get the data from the POST
     $display_name = $_POST['display_name'];
