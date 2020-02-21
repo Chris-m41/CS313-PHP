@@ -13,6 +13,8 @@
     <input type="submit" value="Add Cookie Info" />
     </form>
 
+
+    <h3><a href="../details.php">Return to Main Menu</a></h3
     <?php
         // get the data from the POST
     $display_name = $_POST['display_name'];
@@ -66,6 +68,6 @@ die(); // we always include a die after redirects. In this case, there would be 
        // but in general, there could be things after here that we don't want them
        // to see.
     ?>
-    <h3><a href="../details.php">Return to Main Menu</a></h3>
+   >
 </body>
 </html>
