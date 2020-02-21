@@ -25,7 +25,7 @@
 
         $query = 'INSERT INTO Cookies (display_name, price)'
         . ' VALUES (display_name, price);';
-        $db->query($cookieQuery);
+        $db->query($query);
         var_dump($db->errorInfo());
     ?>
 </body>
