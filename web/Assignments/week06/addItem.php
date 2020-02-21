@@ -14,7 +14,9 @@
         <input type="button" name="Soap" value="Soap">Soap</input>
         <input type="button" name="Chocolate" value="Chocolate">Chocolate</input>
         <input type="button" name="Gum" value="Gum">Gum</input>
-    
+        <form action="http://google.com">
+    <input type="submit" value="Go to Google" />
+</form>
     
 </body>
 </html>
