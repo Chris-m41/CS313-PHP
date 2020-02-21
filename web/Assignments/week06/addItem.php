@@ -9,23 +9,23 @@
 <body>
     <h2>Want to add an item to the list?</h2>
     <h2>Click on the item and then type in the required information.</h2>
-        <form action="addCookies.php">
+        <form action="forms/addCookies.php">
         <input type="submit" value="Add Cookie Brand" />
         </form>
 
-        <form action="addSoda.php">
+        <form action="forms/addSoda.php">
         <input type="submit" value="Add Soda Brand" />
         </form>
 
-        <form action="addSoap.php">
+        <form action="forms/addSoap.php">
         <input type="submit" value="Add Soap Brand" />
         </form>
 
-        <form action="addChocolate.php">
+        <form action="forms/addChocolate.php">
         <input type="submit" value="Add Chocolate Brand" />
         </form>
 
-        <form action="addGum.php">
+        <form action="forms/addGum.php">
         <input type="submit" value="Add Gum Brand" />
         </form>
     
