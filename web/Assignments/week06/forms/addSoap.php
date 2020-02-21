@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Soda</title>
+    <title>Add Soap</title>
 </head>
 <body>
     <?php
@@ -30,9 +30,6 @@
         $statement->bindValue(':price', $price);
 
         $statement->execute();
-
-        // // get the new id
-        $cookieId= $db->lastInsertId("id");
     }
     catch (Exception $ex)
     {
@@ -50,6 +47,6 @@
         // but in general, there could be things after here that we don't want them
         // to see.
     ?>
-   >
+
 </body>
 </html>
