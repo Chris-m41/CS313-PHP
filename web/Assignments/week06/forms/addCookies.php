@@ -47,8 +47,8 @@ try
 
 	$statement->execute();
 
-	// get the new id
-	$cookieId= $db->lastInsertId("id");
+	// // get the new id
+	// $cookieId= $db->lastInsertId("id");
 }
 catch (Exception $ex)
 {
@@ -66,5 +66,6 @@ die(); // we always include a die after redirects. In this case, there would be 
        // but in general, there could be things after here that we don't want them
        // to see.
     ?>
+    <h3><a href="../details.php">Return to Main Menu</a></h3>
 </body>
 </html>
