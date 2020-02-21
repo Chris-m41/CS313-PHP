@@ -7,14 +7,6 @@
     <title>Add Soda</title>
 </head>
 <body>
-    <form action="addSoap.php" method="post">
-    <textarea name="display_name"></textarea>
-    <textarea name="price"></textarea>
-    <input type="submit" value="Add Soap Info" />
-    </form>
-
-
-    <h3><a href="../details.php">Return to Main Menu</a></h3
     <?php
         // get the data from the POST
     $display_name = $_POST['display_name'];

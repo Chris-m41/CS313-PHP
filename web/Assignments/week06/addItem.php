@@ -17,7 +17,7 @@
         <input type="submit" value="Add Soda Brand" />
         </form>
 
-        <form action="forms/addSoap.php">
+        <form action="phpRedirects/soap.php">
         <input type="submit" value="Add Soap Brand" />
         </form>
 
