@@ -12,7 +12,7 @@ form {
 }
 
 p {
-    font-size: 50px;
+    font-size: 25px;
 }
 
 #addItem {
@@ -21,7 +21,6 @@ p {
 }
 
 a {
-    margin-top: 5px;
     color: #BDD4E7;
     border-style: solid;
     border-color: #BDD4E7;
