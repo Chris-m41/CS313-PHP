@@ -1,5 +1,5 @@
 body {
-    background-color: #637074;
+    background-color: #59C3C3;
 }
 
 h1,
@@ -7,7 +7,7 @@ h2,
 h3,
 p,
 form {
-    color: #BDD4E7;
+    color: #EBEBEB;
     text-align: center;
 }
 
@@ -22,9 +22,9 @@ p {
 }
 
 a {
-    color: #BDD4E7;
+    color: #EBEBEB;
     border-style: solid;
-    border-color: #BDD4E7;
+    border-color: #EBEBEB;
     border-width: 2px;
     /* padding: 4px; */
     /* margin: 20px; */

@@ -10,8 +10,8 @@
 </head>
 <body>
 <form action="../forms/addSoda.php" method="post">
-    Enter Soda Name: <textarea name="display_name"></textarea><br>
-    Enter Soda Price: <textarea name="price"></textarea><br>
+    Enter Soda Name: <br> <textarea name="display_name"></textarea><br>
+    Enter Soda Price: <br> <textarea name="price"></textarea><br>
     <input type="submit" value="Add Soda Info" /><br><br>
     </form>
 
