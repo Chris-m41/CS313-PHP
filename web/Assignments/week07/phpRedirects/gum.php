@@ -10,9 +10,9 @@
 </head>
 <body>
 <form action="../forms/addGum.php" method="post">
-    Enter Gum Name: <textarea name="display_name"></textarea><br>
-    Enter Gum Price: <textarea name="price"></textarea><br>
-    Enter Gum Pieces Amount: <textarea name="pieces"></textarea><br>
+    Enter Gum Name: <br> <textarea name="display_name"></textarea><br>
+    Enter Gum Price: <br> <textarea name="price"></textarea><br>
+    Enter Gum Pieces Amount: <br> <textarea name="pieces"></textarea><br>
     <input type="submit" value="Add Gum Info" /><br><br>
     </form>
 
