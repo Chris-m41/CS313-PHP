@@ -24,7 +24,8 @@ a {
     color: #BDD4E7;
     border-style: solid;
     border-color: #BDD4E7;
-    border-width: 1px;
+    border-width: 2px;
+    padding: 4px;
 }
 
 textarea {
