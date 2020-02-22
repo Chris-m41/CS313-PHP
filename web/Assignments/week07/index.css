@@ -11,3 +11,7 @@ form {
     color: #BDD4E7;
     text-align: center;
 }
+
+#addItem {
+    size: 50px;
+}
