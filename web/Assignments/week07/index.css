@@ -26,3 +26,8 @@ a {
     border-color: #BDD4E7;
     border-width: 2px;
 }
+
+textarea {
+    height: 5px;
+    width: 15px;
+}
