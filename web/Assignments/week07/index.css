@@ -6,8 +6,10 @@ h1,
 h2,
 h3,
 a,
-p {
+p,
+input {
     color: #BDD4E7;
+    text-align: center;
 }
 
 
