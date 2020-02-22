@@ -33,7 +33,7 @@
         <input id="addItem" type="submit" value="Add Gum Brand" />
         </form>
         </div>
-        <h3><a href="../details.php">Return to Main Menu</a></h3>
+        <h3><a href="details.php">Return to Main Menu</a></h3>
     </div>
 </body>
 </html>
