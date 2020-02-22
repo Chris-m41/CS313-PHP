@@ -55,7 +55,7 @@
         <input id="displayItems" type="checkbox" name="Soap" value="Soap">Soap</input>
         <input id="displayItems" type="checkbox" name="Chocolate" value="Chocolate">Chocolate</input>
         <input id="displayItems" type="checkbox" name="Gum" value="Gum">Gum</input>
-        <input id="displayItems" type="submit" name="submit" value="Submit"/>
+        <input type="submit" name="submit" value="Submit"/>
     </form>
     </div>
     <h3><a href="addItem.php">Add an Item</a></h3>
