@@ -22,5 +22,6 @@ p {
 
 a {
     color: #BDD4E7;
+    border-style: solid;
     border: #BDD4E7;
 }
