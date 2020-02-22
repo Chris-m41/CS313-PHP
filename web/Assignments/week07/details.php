@@ -62,7 +62,7 @@
     </div>
     <?php
         if (isset($_POST['Cookies'])){
-            echo $_POST['Cookies']; // Displays value of checked checkbox.
+            echo "<h3> Cookies </h3>";
             foreach($cookies as $cookie)
             {
                 $id = $cookie['id'];
@@ -73,7 +73,7 @@
         }
         elseif (isset($_POST['Soda']))
         {
-            echo $_POST['Soda'];
+            echo "<h3> Soda </h3>";
             foreach($sodas as $soda)
             {
                 $id = $soda['id'];
@@ -84,7 +84,7 @@
         }
         elseif (isset($_POST['Soap']))
         {
-            echo $_POST['Soap'];
+            echo "<h3> Soap </h3>";
             foreach($soaps as $soap)
             {
                 $id = $soap['id'];
@@ -95,7 +95,7 @@
         }
         elseif (isset($_POST['Chocolate']))
         {
-            echo $_POST['Chocolate'];
+            echo "<h3> Chocolate </h3>";
             foreach($chocolates as $chocolate)
             {
                 $id = $chocolate['id'];
@@ -106,7 +106,7 @@
         }
         elseif (isset($_POST['Gum']))
         {
-            echo $_POST['Gum'];
+            echo "<h3> Gum </h3>";
             foreach($gums as $gum)
             {
                 $id = $gum['id'];

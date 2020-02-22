@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AddItem</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Add Item</title>
 </head>
 <body>
+    <div>
     <h2>Want to add an item to the list?</h2>
     <h2>Click on the item and then type in the required information.</h2>
+        <div>
         <form action="phpRedirects/cookies.php">
         <input type="submit" value="Add Cookie Brand" />
         </form>
@@ -28,6 +32,7 @@
         <form action="phpRedirects/gum.php">
         <input type="submit" value="Add Gum Brand" />
         </form>
-    
+        </div>
+    </div>
 </body>
 </html>
