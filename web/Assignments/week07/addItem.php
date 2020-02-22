@@ -12,25 +12,25 @@
     <div>
     <h2>Want to add an item to the list?</h2>
     <h2>Click on the item and then type in the required information.</h2>
-        <div>
+        <div >
         <form action="phpRedirects/cookies.php">
-        <input type="submit" value="Add Cookie Brand" />
+        <input id="addItem" type="submit" value="Add Cookie Brand" />
         </form>
 
         <form action="phpRedirects/soda.php">
-        <input type="submit" value="Add Soda Brand" />
+        <input id="addItem" type="submit" value="Add Soda Brand" />
         </form>
 
         <form action="phpRedirects/soap.php">
-        <input type="submit" value="Add Soap Brand" />
+        <input id="addItem" type="submit" value="Add Soap Brand" />
         </form>
 
         <form action="phpRedirects/chocolate.php">
-        <input type="submit" value="Add Chocolate Brand" />
+        <input id="addItem" type="submit" value="Add Chocolate Brand" />
         </form>
 
         <form action="phpRedirects/gum.php">
-        <input type="submit" value="Add Gum Brand" />
+        <input id="addItem" type="submit" value="Add Gum Brand" />
         </form>
         </div>
     </div>
