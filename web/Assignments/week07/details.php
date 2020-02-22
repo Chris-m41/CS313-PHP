@@ -50,12 +50,12 @@
     <h3>Click on one checkbox at a time</h3>
     <div class="container-md">
     <form action="#" method="post">
-        <input id="displayItems" type="checkbox" name="Cookies" value="Cookies">Cookies</input>
-        <input id="displayItems" type="checkbox" name="Soda" value="Soda">Soda</input>
-        <input id="displayItems" type="checkbox" name="Soap" value="Soap">Soap</input>
-        <input id="displayItems" type="checkbox" name="Chocolate" value="Chocolate">Chocolate</input>
-        <input id="displayItems" type="checkbox" name="Gum" value="Gum">Gum</input>
-        <input type="submit" name="submit" value="Submit"/>
+        <input id="displayItems" type="checkbox" name="Cookies" value="Cookies">Cookies</input><br>
+        <input id="displayItems" type="checkbox" name="Soda" value="Soda">Soda</input><br>
+        <input id="displayItems" type="checkbox" name="Soap" value="Soap">Soap</input><br>
+        <input id="displayItems" type="checkbox" name="Chocolate" value="Chocolate">Chocolate</input><br>
+        <input id="displayItems" type="checkbox" name="Gum" value="Gum">Gum</input><br>
+        <input type="submit" name="submit" value="Submit"/><br><br>
     </form>
     </div>
    
