@@ -12,6 +12,10 @@ form {
     text-align: center;
 }
 
+p {
+    font-size: 50px;
+}
+
 #addItem {
     width: 250px;
     height: 100px;
