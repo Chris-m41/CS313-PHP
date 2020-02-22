@@ -9,14 +9,17 @@
     <title>Add Chocolate</title>
 </head>
 <body>
+    <div class="container">
+        <div class="container-md">
 <form action="../forms/addChocolate.php" method="post">
     Enter Chocolate Name: <textarea name="display_name"></textarea> <br>
     Enter Chocolate Price: <textarea name="price"></textarea> <br>
     Enter Chocolate Weigh in Ounces: <textarea name="ounces"></textarea> <br>
     <input type="submit" value="Add Chocolate Info" />
     </form>
-
+    </div>
 
     <h3><a href="../details.php">Return to Main Menu</a></h3>
+    </div>
 </body>
 </html>
