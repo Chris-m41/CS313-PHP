@@ -12,7 +12,7 @@
 <form action="../forms/addChocolate.php" method="post">
     Enter Chocolate Name: <textarea name="display_name"></textarea> <br>
     Enter Chocolate Price: <textarea name="price"></textarea> <br>
-    Enter Chocolate Weigh in Ounces: <textarea name="ounces"></textarea>
+    Enter Chocolate Weigh in Ounces: <textarea name="ounces"></textarea> <br>
     <input type="submit" value="Add Chocolate Info" />
     </form>
 
