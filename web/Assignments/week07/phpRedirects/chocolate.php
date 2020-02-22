@@ -19,7 +19,7 @@
     </form>
     </div>
 
-    <h3><a href="../details.php">Return to Main Menu</a></h3>
+    <h3><a id="mainMenu" href="../details.php">Return to Main Menu</a></h3>
     </div>
 </body>
 </html>
