@@ -45,12 +45,12 @@
     <title>Details</title>
 </head>
 <body>
-  <div class=".contianer">
-        <div class=".container-md">
+  <div class="contianer">
+        <div class="container-md">
     <h1>See brands pertaining to that item.</h1>
     <h3>Click on one checkbox at a time</h3>
         </div>
-        <div class=".container-md">
+        <div class="container-md">
     <form action="#" method="post">
         <input type="checkbox" name="Cookies" value="Cookies">Cookies</input>
         <input type="checkbox" name="Soda" value="Soda">Soda</input>
