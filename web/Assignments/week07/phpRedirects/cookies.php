@@ -10,9 +10,9 @@
 </head>
 <body>
 <form action="../forms/addCookies.php" method="post">
-    Enter Cookie Brand Name: <textarea name="display_name"></textarea>
-    Enter Cookie Price: <textarea name="price"></textarea>
-    <input type="submit" value="Add Cookie Info" />
+    Enter Cookie Brand Name: <textarea name="display_name"></textarea><br>
+    Enter Cookie Price: <textarea name="price"></textarea><br>
+    <input type="submit" value="Add Cookie Info" /><br><br>
     </form>
 
 

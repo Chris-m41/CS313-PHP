@@ -10,9 +10,9 @@
 </head>
 <body>
 <form action="../forms/addSoap.php" method="post">
-    Enter Soap Name: <textarea name="display_name"></textarea>
-    Enter Soap Price: <textarea name="price"></textarea>
-    <input type="submit" value="Add Soap Info" />
+    Enter Soap Name: <textarea name="display_name"></textarea><br>
+    Enter Soap Price: <textarea name="price"></textarea><br>
+    <input type="submit" value="Add Soap Info" /><br><br>
     </form>
 
 
