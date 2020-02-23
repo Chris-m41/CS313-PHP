@@ -68,7 +68,7 @@
                 $id = $cookie['id'];
                 $name = $cookie['display_name'];
                 $price = $cookie['price'];
-                echo"<p>$name - $price </p>";
+                echo"<p>$name - $$price </p>";
             }
         }
         elseif (isset($_POST['Soda']))
@@ -79,7 +79,7 @@
                 $id = $soda['id'];
                 $name = $soda['display_name'];
                 $price = $soda['price'];
-                echo"<p>$name - $price </p>";
+                echo"<p>$name - $$price </p>";
             }
         }
         elseif (isset($_POST['Soap']))
@@ -90,7 +90,7 @@
                 $id = $soap['id'];
                 $name = $soap['display_name'];
                 $price = $soap['price'];
-                echo"<p>$name - $price </p>";
+                echo"<p>$name - $$price </p>";
             }
         }
         elseif (isset($_POST['Chocolate']))
@@ -101,7 +101,8 @@
                 $id = $chocolate['id'];
                 $name = $chocolate['display_name'];
                 $price = $chocolate['price'];
-                echo"<p>$name - $price </p>";
+                $ounces = $chocolate['ounces'];
+                echo"<p>$name -  $$price - $ounces oz.</p>";
             }
         }
         elseif (isset($_POST['Gum']))
@@ -112,7 +113,8 @@
                 $id = $gum['id'];
                 $name = $gum['display_name'];
                 $price = $gum['price'];
-                echo"<p>$name - $price </p>";
+                $pieces = $gum['pieces'];
+                echo"<p>$name - $$price - $pieces pieces/pack</p>";
             }
         }
     ?>
